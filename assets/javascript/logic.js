@@ -1,26 +1,3 @@
-// Steps to complete:
-// 1. Initialize Firebase
-// 2. Create button for adding new train - then update the html + update the database
-// 3. Create a way to retrieve newly added trains from train database.
-// 4. Create a way to calculate the next arrival time + determine minutes away.
-// 5. Use moment.js formatting to maintain time.
-
-
-
-// My web app's Firebase configuration
-console.log(moment().format('h:mm'))
-
-
-function displayTime() {
-    var time = moment().format('h:mm A');
-    $('#clock').html(time);
-    setTimeout(displayTime, 1000);
-}
-
-$(document).ready(function () {
-    displayTime();
-});
-
 let firebaseConfig = {
     apiKey: "AIzaSyAdVdy8evj2oqE2m4NUlCl8LddqLQeZpr8",
     authDomain: "musclememory2020.firebaseapp.com",
@@ -38,7 +15,33 @@ firebase.initializeApp(firebaseConfig);
 
 let database = firebase.database();
 
-// 2. Button for adding new train
+
+function displayTime() {
+    var time = moment().format('h:mm A');
+    $('#clock').html(time);
+    setTimeout(displayTime, 1000);
+}
+
+$(document).ready(function () {
+
+    let b = document.getElementById("frequency-input");
+
+    $("#two-Five").on("click", function () {
+        b.value = 150;
+    });
+    $("#three").on("click", function () {
+        b.value = 180;
+    });
+    $("#three-Five").on("click", function () {
+        b.value = 210;
+    });
+    $("#four").on("click", function () {
+        b.value = 240;
+    });
+    displayTime();
+});
+
+// 2. Button for adding new meal
 $("#add-meal-btn").on("click", function (event) {
     event.preventDefault();
 
@@ -48,9 +51,12 @@ $("#add-meal-btn").on("click", function (event) {
     let lastMeal = $("#lastM-input").val().trim();
     let freq = $("#frequency-input").val().trim();
 
+
+
+
+
     console.log(mealName);
     console.log("------------------");
-
 
 
 
@@ -148,11 +154,7 @@ database.ref().on("child_added", function (childSnapshot) {
     $("#meals-table > tbody").append(newRow);
 
     // Appending dynamic "Min. Until Next Meal" time to div below header title"
-    $("#nxtMealT").append(nextMealT);
-
-
-
-
+    $("#nxtMealT").text(nextMealT);
 
 
 });

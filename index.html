@@ -94,45 +94,45 @@
                         <div class="row">
                             <!-- Entry Form -->
                             <form>
-                                <div class="col-lg-3">
+                                <div class="col-lg-2">
                                     <div class="form-group mealD">
                                         <label for="meal-name-input">Meal Description</label>
                                         <input type="text" class="form-control" id="meal-name-input">
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-2">
                                     <div class="form-group">
                                         <label for="destination-input">Calories (Approx.)</label>
                                         <input type="number" class="form-control" id="calories-input">
                                     </div>
                                 </div>
-                                <div class="col-lg-4">
-                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                        <p class="mealFreq">Meal Frequency (hrs.)</p>
-                                        <label class="btn btn-secondary">
-                                            <input type="radio" name="options" id="option1" autocomplete="off">2.5
-                                        </label>
-                                        <label class="btn btn-secondary">
-                                            <input type="radio" name="options" id="option2" autocomplete="off">3.0
-                                        </label>
-                                        <label class="btn btn-secondary">
-                                            <input type="radio" name="options" id="option3" autocomplete="off">3.5
-                                        </label>
-                                        <label class="btn btn-secondary">
-                                            <input type="radio" name="options" id="option4" autocomplete="off">4.0
-                                        </label>
-                                        <label class="btn btn-secondary">
-                                            <input type="radio" name="options" id="option5" autocomplete="off">4.5
-                                        </label>
+                                <div class="col-lg-2">
+                                    <div class="form-group">
+                                        <label for="lastM-input">Time of Last Meal</label>
+                                        <input type="text" class="form-control" id="lastM-input">
                                     </div>
                                 </div>
-                                <div class="col-lg-2">
-                                    <button type="submit" class="btn btn-danger" id="add-meal-btn">
-                                        <h4>LOG MEAL</h4>
-                                    </button>
+                                <div class="col-lg-3" id="mealFreq">
+                                    <p class="mealFreq">Meal Frequency (hrs.)</p>
+                                    <button type="button" class="btn btn-secondary" id="two-Five">2.5 </button>
+                                    <button type="button" class="btn btn-secondary" id="three">3.0 </button>
+                                    <button type="button" class="btn btn-secondary" id="three-Five">3.5 </button>
+                                    <button type="button" class="btn btn-secondary" id="four">4.0 </button>
                                 </div>
-                            </form>
+                                <div class="col-lg-3 form-group customize">
+                                    <p class="customize">Customize Frequency (Mins.)</p>
+                                    <input type="number" class="form-control" id="frequency-input">
+                                </div>
+
                         </div>
+                        <div class="row">
+                            <div class="col-lg">
+                                <button type="submit" class="btn btn-danger" id="add-meal-btn">
+                                    <h4>LOG MEAL</h4>
+                                </button>
+                            </div>
+                        </div>
+                        </form>
 
                     </div>
 
@@ -141,6 +141,8 @@
             </div>
 
         </div>
+
+    </div>
 
     </div>
 

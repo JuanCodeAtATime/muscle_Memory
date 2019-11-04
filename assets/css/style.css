@@ -113,7 +113,7 @@ a:link {
   
  /* Changed default input field colors from white to charcoal to align with military theme */
 
-#meal-name-input, #calories-input, #lastM-input, #frequency-input {
+#meal-name-input, #calories-input, #lastM-input {
     background-color:  #504f54;
     color: whitesmoke;
      
@@ -134,11 +134,34 @@ hr.coolHr {
 
   }
 
-  .btn-secondary {
+  .btn-secondary, #frequency-input {
       background-color: #319177;
-      margin: 8px;
+      margin-bottom: 0;
       border-radius: 10px;
+      text-align: center;
+      align-items: center;
+      color: whitesmoke;
+      align-content: center;
+      
+      
   }
+
+  .customize {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    color: whitesmoke;
+    padding-top: 5px;
+    text-align: center;
+    align-items: center;
+    display: inline-block;
+    
+  }
+
+  #frequency-input {
+    width: 100px;
+    display: inline-block;
+  }
+  
 
  
   

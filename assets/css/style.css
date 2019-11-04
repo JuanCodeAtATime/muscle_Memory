@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("../images/meal2.jpg");
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+.container {
+   /*The min-width property is set to 385px to prevent collapsing or text overflow on smaller devices */
+    margin: 15px 0px;
+    min-width: 385px;
+    display: flex;
+    float: none;
+    padding: 15px;
+    color: whitesmoke;
+}
+
+.top-panel, .panel, #background {
+
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    margin: auto;
+    margin-top: 10px;
+    background-color: #36454f;
+    opacity: 0.83;
+    border-radius: 4px;
+    align-content: center;
+    text-align: center;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+      
+    
+
+}
+#meals-table, tr > th {
+    text-align: center;
+}
+
+
+.btn, .top-panel, .panel-schedule, .aF {
+    font-family: 'Special Elite', cursive;
+    font-weight: bold;
+   
+}
+.lead {
+    color: whitesmoke;
+    margin: 0;
+   
+}
+
+#clock {
+    margin-top: 0;
+    font-family: 'Quantico', sans-serif;
+    background-color:#504f54;
+    display: block;
+    padding: 2px;
+    opacity: 0.83;
+    
+}
+
+#nxtMealT {
+    margin-top: 0;
+    font-family: 'Quantico', sans-serif;
+    background-color:#504f54;
+    display: block;
+    padding: 2px;
+    /* opacity: 0.83; */
+
+
+}
+
+/* Red 'Log Meal' button */
+#add-meal-btn {
+    padding: 0 10px;
+}
+
+/* Needed !important value to undue the evil Bootstrap spell which was whiting-out the rows
+on hover.  Now the text color changes on hover instead of it being all white & unreadable =)  */
+tr:hover {
+    color: #36454f !important;
+    text-decoration: none;    
+    
+}
+
+/* All a selectors below target the military time link.  All these properties had to be efined
+to get rid of the hyperlink's default blue color. */
+a { 
+    text-decoration : none; 
+    color : whitesmoke; 
+}
+
+a:link {
+    color: whitesmoke;
+    text-decoration : none; 
+  }
+  
+  a:visited {
+    color: whitesmoke;
+    text-decoration : none; 
+  }
+  
+  a:hover {
+    color: red;
+    text-decoration : none; 
+  }
+
+  a:active {
+    color: whitesmoke;
+    text-decoration: none;
+}
+  
+ /* Changed default input field colors from white to charcoal to align with military theme */
+
+#meal-name-input, #calories-input, #lastM-input, #frequency-input {
+    background-color:  #504f54;
+    color: whitesmoke;
+     
+}
+
+/* A cool strip (horizontal line) to complement the clock strip above it */
+hr.coolHr {
+    border: 12px solid #36454f;
+    margin: 0 auto;
+    padding-bottom: 0;
+    opacity: 0.83;
+   
+  }
+
+  .form-group {
+    text-align: center;
+    margin: 12px;
+
+  }
+
+  .btn-secondary {
+      background-color: #319177;
+      margin: 8px;
+      border-radius: 10px;
+  }
+
+ 
+  
+
+/* Font families inventory:
+font-family: 'Turret Road', cursive;
+font-family: 'Quantico', sans-serif;
+font-family: 'Special Elite', cursive;
+*/
+
+/* Font inventory
+font-family: 'Staatliches', cursive;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Quantico', sans-serif;
+*/

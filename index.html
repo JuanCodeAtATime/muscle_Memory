@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- Google Fonts Reference -->
+    <link href="https://fonts.googleapis.com/css?family=Quantico|Special+Elite|Turret+Road&display=swap"
+        rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-database.js"></script>
+    <!-- Moment.js Reference -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <title>Muscle Memory</title>
+
+</head>
+
+<body>
+
+    <!-- Blackhawk Time -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="top-panel">
+                            <h1 style="color:whitesmoke"><strong>MUSCLE MEMORY</strong></h1>
+                            <div class="col-lg-6">
+                                <div class="lead">
+                                    Time Now
+                                    <p id="clock"></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="lead">
+                                    Next Meal Time
+                                    <p id="nxtMealT"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blackhawk Schedule -->
+                <div class="panel" id="background">
+                    <div class="panel-schedule">
+                        <strong>
+                            <h3>MY MEAL TRACKER</h3>
+                        </strong>
+                        <hr class="coolHr">
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-hover" id="meals-table">
+                            <thead>
+                                <tr>
+                                    <th>MEAL</th>
+                                    <th>CALORIES</th>
+                                    <th>FREQUENCY (min)</th>
+                                    <th>MIN. UNTIL NEXT MEAL</th>
+                                </tr>
+
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Added Meals Go Here  -->
+                <!-- Used an arbitrary "aF" class to target the font in this panel -->
+                <div class="panel aF" id="background">
+                    <div class="panel-heading panel-title">
+                        <strong>
+                            <h3>LOG MEAL</h3>
+                        </strong>
+                        <hr>
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="row">
+                            <!-- Entry Form -->
+                            <form>
+                                <div class="col-lg-3">
+                                    <div class="form-group mealD">
+                                        <label for="meal-name-input">Meal Description</label>
+                                        <input type="text" class="form-control" id="meal-name-input">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label for="destination-input">Calories (Approx.)</label>
+                                        <input type="number" class="form-control" id="calories-input">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <p class="mealFreq">Meal Frequency (hrs.)</p>
+                                        <label class="btn btn-secondary">
+                                            <input type="radio" name="options" id="option1" autocomplete="off">2.5
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                            <input type="radio" name="options" id="option2" autocomplete="off">3.0
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                            <input type="radio" name="options" id="option3" autocomplete="off">3.5
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                            <input type="radio" name="options" id="option4" autocomplete="off">4.0
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                            <input type="radio" name="options" id="option5" autocomplete="off">4.5
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <button type="submit" class="btn btn-danger" id="add-meal-btn">
+                                        <h4>LOG MEAL</h4>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="assets/javascript/logic.js"></script>
+
+</body>
+
+</html>

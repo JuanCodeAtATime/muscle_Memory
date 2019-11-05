@@ -5,6 +5,7 @@ body {
     align-items: center;
     display: flex;
     justify-content: center;
+    position: static;
 
 }
 
@@ -17,6 +18,21 @@ body {
     padding: 15px;
     color: whitesmoke;
 }
+.title {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Tagline, just incase */
+
+/* .tag {
+  font-family: 'Shadows Into Light', cursive;
+  margin-top: 0;
+  margin-bottom: 18px;
+  padding-top: 0;
+} */
+
+
 
 .top-panel, .panel, #background {
 
@@ -53,22 +69,21 @@ body {
 #clock {
     margin-top: 0;
     font-family: 'Quantico', sans-serif;
-    background-color:#504f54;
+    background-color: #6CA67C;
     display: block;
     padding: 2px;
     opacity: 0.83;
+    border-radius: 10px;
     
 }
 
 #nxtMealT {
     margin-top: 0;
     font-family: 'Quantico', sans-serif;
-    background-color:#504f54;
+    background-color: #CA3435;
     display: block;
     padding: 2px;
-    /* opacity: 0.83; */
-
-
+    border-radius: 10px;
 }
 
 /* Red 'Log Meal' button */
@@ -111,13 +126,7 @@ a:link {
     text-decoration: none;
 }
   
- /* Changed default input field colors from white to charcoal to align with military theme */
 
-#meal-name-input, #calories-input, #lastM-input {
-    background-color:  #504f54;
-    color: whitesmoke;
-     
-}
 
 /* A cool strip (horizontal line) to complement the clock strip above it */
 hr.coolHr {
@@ -128,38 +137,38 @@ hr.coolHr {
    
   }
 
+/* All code below controls the Add Meals row where all User input goes */
+   
+#meal-name-input, #calories-input, #lastM-input {
+  background-color:  #504f54;
+  color: whitesmoke;
+  text-align: center;
+   
+}
+
   .form-group {
     text-align: center;
-    margin: 12px;
+    margin: 0;
 
   }
 
   .btn-secondary, #frequency-input {
       background-color: #319177;
-      margin-bottom: 0;
       border-radius: 10px;
       text-align: center;
       align-items: center;
       color: whitesmoke;
       align-content: center;
+     
       
-      
-  }
-
-  .customize {
-    margin-top: 3px;
-    margin-bottom: 3px;
-    color: whitesmoke;
-    padding-top: 5px;
-    text-align: center;
-    align-items: center;
-    display: inline-block;
-    
-  }
+ }
 
   #frequency-input {
-    width: 100px;
+    width: 33%;
+    align-items: center;
     display: inline-block;
+
+    
   }
   
 

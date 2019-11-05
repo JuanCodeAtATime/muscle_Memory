@@ -9,7 +9,8 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
     <!-- Google Fonts Reference -->
-    <link href="https://fonts.googleapis.com/css?family=Quantico|Special+Elite|Turret+Road&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css?family=Quantico|Special+Elite|Shadows+Into+Light|Turret+Road&display=swap"
         rel="stylesheet">
 
     <!-- jQuery -->
@@ -37,7 +38,13 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="top-panel">
-                            <h1 style="color:whitesmoke"><strong>MUSCLE MEMORY</strong></h1>
+                            <h1 style="color:whitesmoke" class="title"><strong>MUSCLE MEMORY</strong></h1>
+                            <!-- Tagline -->
+                            <!-- <p>
+                                <h3 class="tag">
+                                    Memorizing Your Meal Times So You Don't Have To
+                                </h3>
+                            </p> -->
                             <div class="col-lg-6">
                                 <div class="lead">
                                     Time Now
@@ -45,7 +52,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div class="lead">
+                                <div class="lead red">
                                     Next Meal Time
                                     <p id="nxtMealT"></p>
                                 </div>
@@ -108,11 +115,11 @@
                                 </div>
                                 <div class="col-lg-2">
                                     <div class="form-group">
-                                        <label for="lastM-input">Time of Last Meal</label>
+                                        <label for="lastM-input">Mealtime (Now)</label>
                                         <input type="text" class="form-control" id="lastM-input">
                                     </div>
                                 </div>
-                                <div class="col-lg-3" id="mealFreq">
+                                <div class="col-lg-3 form-group" id="mealFreq">
                                     <p class="mealFreq">Meal Frequency (hrs.)</p>
                                     <button type="button" class="btn btn-secondary" id="two-Five">2.5 </button>
                                     <button type="button" class="btn btn-secondary" id="three">3.0 </button>
@@ -120,8 +127,8 @@
                                     <button type="button" class="btn btn-secondary" id="four">4.0 </button>
                                 </div>
                                 <div class="col-lg-3 form-group customize">
-                                    <p class="customize">Customize Frequency (Mins.)</p>
-                                    <input type="number" class="form-control" id="frequency-input">
+                                    <p class="customFreq">Customize Frequency (Mins.)</p>
+                                    <input type="number" class="form-control t" id="frequency-input">
                                 </div>
 
                         </div>

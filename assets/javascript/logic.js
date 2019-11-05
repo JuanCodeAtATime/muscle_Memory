@@ -19,6 +19,7 @@ let database = firebase.database();
 function displayTime() {
     var time = moment().format('h:mm A');
     $('#clock').html(time);
+    $('#lastM-input').val(time);
     setTimeout(displayTime, 1000);
 }
 
@@ -39,6 +40,7 @@ $(document).ready(function () {
         b.value = 240;
     });
     displayTime();
+
 });
 
 // 2. Button for adding new meal

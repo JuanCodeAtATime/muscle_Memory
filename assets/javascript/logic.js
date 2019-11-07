@@ -23,6 +23,8 @@ function displayTime() {
     setTimeout(displayTime, 1000);
 }
 
+
+
 $(document).ready(function () {
 
     let b = document.getElementById("frequency-input");
@@ -90,6 +92,9 @@ $("#add-meal-btn").on("click", function (event) {
     $("#frequency-input").val("");
 
 });
+
+
+
 
 // 3. Create Firebase event for adding meals to database and a row in the html when a user adds an entry
 database.ref().on("child_added", function (childSnapshot) {

@@ -70,7 +70,7 @@
                 <div class="col-lg-12">
                     <div class="panel top" id="background">
                         <div class="panel-schedule">
-                            <h3 class="title">MUSCLE MEMORY</h3>
+                            <h3 class="title">MEAL PLAN</h3>
                             <div class="ttt">
                                 <p id="nxtMeal">Next Meal Time</p>
                                 <p id="nxtMealT"></p>
@@ -85,13 +85,15 @@
 
         <!-- SEPARATING TABLE BELOW FROM MEAL TRACKER ROW -->
         <div class="panel-body">
-            <table class="table table-hover" id="meals-table">
+            <table class="table table-hover" id="#created-meals-table">
                 <thead>
                     <tr>
-                        <th><strong>MEAL</strong></th>
+                        <th><strong>MEAL NICKNAME</strong></th>
+                        <th><strong>MEAL DESCRIPTION</strong></th>
+                        <th><strong>CARBOHYDRATES</strong></th>
+                        <th><strong>PROTEIN</strong></th>
+                        <th><strong>FAT</strong></th>
                         <th><strong>CALORIES</strong></th>
-                        <th><strong>FREQUENCY (min)</strong></th>
-                        <th><strong>MIN. UNTIL NEXT MEAL</strong></th>
                     </tr>
 
                 </thead>
@@ -101,63 +103,6 @@
             </table>
         </div>
         <!-- SEPARATING TABLE ABOVE FROM MEAL TRACKER ROW -->
-
-
-        <!-- BELOW BEGINS THE INPUT FIELDS TO ADD MEALS -->
-        <div class="panel aF" id="background">
-            <div class="panel-heading panel-title">
-                <h4 class="title">MY MEAL NOW</h4>
-                <hr>
-            </div>
-
-            <div class="panel-body">
-                <div class="row">
-                    <form>
-                        <div class="col-lg-2">
-                            <div class="form-group mealD">
-                                <label for="meal-name-input">Meal Description</label>
-                                <input type="text" class="form-control" id="meal-name-input">
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="form-group">
-                                <label for="destination-input">Calories (Approx.)</label>
-                                <input type="number" class="form-control" id="calories-input">
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="form-group">
-                                <label for="lastM-input">Mealtime (Now)</label>
-                                <input type="text" class="form-control" id="lastM-input">
-                            </div>
-                        </div>
-                        <div class="col-lg-3 form-group" id="mealFreq">
-                            <p class="mealFreq"><strong>Frequency (hrs.)</strong></p>
-                            <button type="button" class="btn btn-secondary" id="two-Five">2.5 </button>
-                            <button type="button" class="btn btn-secondary" id="three">3.0 </button>
-                            <button type="button" class="btn btn-secondary" id="three-Five">3.5 </button>
-                            <button type="button" class="btn btn-secondary" id="four">4.0 </button>
-                        </div>
-                        <div class="col-lg-3 form-group customize">
-                            <p class="customFreq"><strong>Frequency (Mins.)</strong></p>
-                            <input type="number" class="form-control t" id="frequency-input">
-                        </div>
-                        <div class="row">
-                            <div class="col-lg">
-                                <button type="submit" class="btn btn-danger" id="add-meal-btn">
-                                    <h4 class="title">LOG MEAL</h4>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                    <!-- Two /divs below are for panel-body and row divs directly above form -->
-                </div>
-            </div>
-
-
-        </div>
-
-        <!-- ABOVE ENDS THE INPUT FIELDS TO ADD MEALS -->
 
 
         <!-- Bottommost /Div (below) containing main content -->
@@ -187,6 +132,9 @@
     </div>
     <!-- FOOTER END -->
     <script src="assets/javascript/logic.js">
+
+    </script>
+    <script src="assets/javascript/mealCreate.js">
 
     </script>
 

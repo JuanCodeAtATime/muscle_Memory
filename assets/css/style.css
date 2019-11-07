@@ -65,6 +65,10 @@ li {
     text-align: center;
 }
 
+#created-meals-table, tr > th {
+  text-align: center;
+}
+
 
 .title {
     font-family: 'Bevan', cursive;

@@ -93,6 +93,62 @@ $("#add-meal-btn").on("click", function (event) {
 
 });
 
+// 2. Button for adding new meal
+$("#create-meal-btn").on("click", function (event) {
+    event.preventDefault();
+
+    // Storing User input values into variables
+
+
+    let mealNickname = $("#meal-nick-input").val().trim();
+    let mealDescrip = $("#meal-descrip-input").val().trim();
+    let carbs = $("#carbs-input").val().trim();
+    let protein = $("#protein-input").val().trim();
+    let fats = $("#fats-input").val().trim();
+    let cals1 = $("#cals-input").val().trim();
+
+
+    alert(mealNickname);
+
+
+    // Creating local "temporary" object to hold new train data
+    let newlyCreated = {
+        newNick: mealNickname,
+        mealDesc: mealDescrip,
+        cHo: carbs,
+        pro: protein,
+        phat: fats,
+        cal: cals1
+    };
+
+    console.log(newlyCreated);
+    console.log("lllllllllllllllllllllll");
+    // Pushing new train data to the database
+    database.ref().push(newlyCreated);
+
+    // Logs everything to console
+    console.log(newlyCreated.newNick);
+    console.log(newlyCreated.mealDesc);
+    console.log(newlyCreated.cHo);
+    console.log(newlyCreated.pro);
+    console.log(newlyCreated.phat);
+    console.log(newlyCreated.cal);
+
+    // Create a modal for the below ALERT
+    alert("New meal successfully created. View it in the updated Meal Plan");
+
+    // Clears all of the text-boxes upon submission
+
+    $("#meal-nick-input").val("")
+    $("#meal-descrip-input").val("");
+    $("#carbs-input").val("");
+    $("#protein-input").val("");
+    $("#fats-input").val("");
+    $("#cals-input").val("");
+
+
+});
+
 
 
 
@@ -107,11 +163,24 @@ database.ref().on("child_added", function (childSnapshot) {
     let lastMeal = childSnapshot.val().lastM;
     let freq = childSnapshot.val().newFreq;
 
+
+
+    let mealNickname = childSnapshot.val().newNick;
+    let mealDescrip = childSnapshot.val().mealDesc;
+    let carbs = childSnapshot.val().cHo;
+    let protein = childSnapshot.val().pro;
+    let fats = childSnapshot.val().phat;
+    let cals1 = childSnapshot.val().cal;
+
     // Train Info
-    console.log(mealName);
-    console.log(calories);
-    console.log(lastMeal);
-    console.log(freq);
+    console.log(mealNickname);
+    console.log(mealDescrip);
+    console.log(carbs);
+    console.log(protein);
+
+
+    // Creating new row that will be populated with User input + time calculations based on this input
+
 
 
 
@@ -156,6 +225,17 @@ database.ref().on("child_added", function (childSnapshot) {
         $("<td>").text(mtNxMeal)
 
     );
+    let newlyCreatedMealRow = $("<tr>").append(
+        $("<td>").text(mealNickname),
+        $("<td>").text(mealDescrip),
+        $("<td>").text(carbs),
+        $("<td>").text(protein),
+        $("<td>").text(fats),
+        $("<td>").text(cals1)
+    );
+
+    // Appending new row to the table
+    $("#created-meals-table > tbody").append(newlyCreatedMealRow);
 
     // Appending new row to the table
     $("#meals-table > tbody").append(newRow);
@@ -165,4 +245,10 @@ database.ref().on("child_added", function (childSnapshot) {
 
 
 });
+
+
+
+
+
+
 

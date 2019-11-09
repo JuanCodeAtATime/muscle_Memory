@@ -1,0 +1,76 @@
+ <script type="text/javascript">
+        let debugScript = true;
+
+
+        // MY COMMENTS:  IF THIS doesn't work, try changing tableElem parameter back to tableId
+        function computeTableColumnTotal(tableId, colNumber) {
+            // find the table with id attribute tableId
+            // return the total of the numerical elements in column colNumber
+            // skip the top row (headers) and bottom row (where the total will go)
+
+            let result = 0;
+
+            try {
+                let tableElem = window.document.getElementById("created-meals-table");
+                let tableBody = tableElem.getElementsByTagName("tbody").item(0);
+                let i;
+                let howManyRows = tableBody.rows.length;
+                for (i = 1; i < (howManyRows - 1); i++) // skip first and last row (hence i=1, and howManyRows-1)
+                {
+                    let thisTrElem = tableBody.rows[i];
+                    let thisTdElem = thisTrElem.cells[colNumber];
+                    let thisTextNode = thisTdElem.childNodes.item(0);
+                    if (debugScript) {
+                        window.alert("text is " + thisTextNode.data);
+                    } // end if
+
+                    // try to convert text to numeric
+                    let thisNumber = parseFloat(thisTextNode.data);
+                    // if you didn't get back the value NaN (i.e. not a number), add into result
+                    if (!isNaN(thisNumber))
+                        result += thisNumber;
+                } // end for
+
+            } // end try
+            catch (ex) {
+                window.alert("Exception in function computeTableColumnTotal()\n" + ex);
+                result = 0;
+            }
+            finally {
+                return result;
+            }
+        }
+
+
+        function finishTable() {
+
+            if (debugScript)
+                window.alert("Beginning of function finishTable");
+
+            let tableElemName = "created-meals-table";
+
+            let totalCarbs = computeTableColumnTotal("created-meals-table", 2);
+            let totalPro = computeTableColumnTotal("created-meals-table", 3);
+            let totalFats = computeTableColumnTotal("created-meals-table", 4);
+            let totalCals = computeTableColumnTotal("created-meals-table", 5);
+
+
+            try {
+                let totalCarbsElem = window.document.getElementById("totalCarbs");
+                totalCarbsElem.innerHTML = totalCarbs;
+
+                let totalProElem = window.document.getElementById("totalPro");
+                totalProElem.innerHTML = totalPro;
+
+                let totalFatsElem = window.document.getElementById("totalFats");
+                totalFatssElem.innerHTML = totalFats;
+
+                let totalCalsElem = window.document.getElementById("totalCarbs");
+                totalCalsElem.innerHTML = totalCals;
+            }
+            catch (ex) {
+                window.alert("Exception in function finishTable()\n" + ex);
+            }
+            return;
+        }
+    </script>

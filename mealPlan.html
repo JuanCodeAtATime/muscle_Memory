@@ -27,121 +27,75 @@
     <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-database.js"></script>
     <!-- Moment.js Reference -->
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+
 </head>
 
 <body>
-
-    <!-- COLLAPSIBLE NAV BAR BEGIN -->
-    <div class="pos-f-t">
-        <div class="collapse" id="navbarToggleExternalContent">
-            <div class="bg-dark p-4">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">
-                        <h5 class="text-white navFont">Home</h5>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="mealPlan.html">
-                        <h5 class="text-white navFont">Meal Plan</h5>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="mealCreate.html">
-                        <h5 class="text-white navFont">Meal Create</h5>
-                    </a>
-                </li>
-            </div>
-        </div>
-        <nav class="navbar navbar-dark bg-dark">
-            <button class="navbar-toggler" type="button" data-toggle="collapse"
-                data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </nav>
-    </div>
-
-    <!-- COLLAPSIBLE NAV BAR END -->
-
-    <div class="container">
-        <!-- first container row BEGIN div -->
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="panel top" id="background">
-                        <div class="panel-schedule">
-                            <h3 class="title">MEAL PLAN</h3>
-                            <div class="ttt">
-                                <p id="nxtMeal">Next Meal Time</p>
-                                <p id="nxtMealT"></p>
-                            </div>
-                            <hr class="coolHr">
+    <!-- MY NAV BAR BEGIN -->
+    <div class="navbar" id="nav">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="nav">
+                    <div class="nav">
+                        <img src="assets/images/ppinc.png" width="35" height="35" class="ppincLogo" alt="">
+                        <h3 class="title">MEAL PLAN</h3>
+                        <div class="ttt">
+                            <p id="nxtMeal">Next Meal Time</p>
+                            <a class="nav-link" href="index.html">
+                                <p id="listItem1">Home</p>
+                            </a>
+                            <p id="nxtMealT"></p>
+                            <a class="nav-link" href="mealCreate.html">
+                                <p id="listItem1">Create</p>
+                            </a>
                         </div>
+
                     </div>
                 </div>
             </div>
-            <!-- first container row END div -->
         </div>
 
-        <!-- SEPARATING TABLE BELOW FROM MEAL TRACKER ROW -->
-        <div class="panel-body">
-            <table class="table table-hover" id="created-meals-table">
-                <thead>
-                    <tr>
-                        <th><strong>MEAL NICKNAME</strong></th>
-                        <th><strong>MEAL DESCRIPTION</strong></th>
-                        <th><strong>CARBOHYDRATES</strong></th>
-                        <th><strong>PROTEIN</strong></th>
-                        <th><strong>FAT</strong></th>
-                        <th><strong>CALORIES</strong></th>
-                    </tr>
+        <!--MY NAV BAR END -->
 
-                </thead>
-                <tbody>
+        <!-- COLLAPSIBLE NAV BAR END -->
 
-                </tbody>
-            </table>
+        <div class="container">
+            <!-- first container row BEGIN div -->
+
+            <!-- SEPARATING TABLE BELOW FROM MEAL TRACKER ROW -->
+            <div class="panel-body">
+                <table class="table table-hover" id="created-meals-table">
+                    <thead>
+                        <tr>
+                            <th><strong>MEAL NICKNAME</strong></th>
+                            <th><strong>MEAL DESCRIPTION</strong></th>
+                            <th><strong>CARBOHYDRATES</strong></th>
+                            <th><strong>PROTEIN</strong></th>
+                            <th><strong>FAT</strong></th>
+                            <th><strong>CALORIES</strong></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                    <tfoot>
+
+                    </tfoot>
+                </table>
+            </div>
+            <!-- SEPARATING TABLE ABOVE FROM MEAL TRACKER ROW -->
+
+
+
+
+            <!-- Bottommost /Div (below) containing main content -->
         </div>
-        <!-- SEPARATING TABLE ABOVE FROM MEAL TRACKER ROW -->
+        <div id="body"></div>
+        <div id="footer">Primal Platoon, Tech.</div>
+        <script src="assets/javascript/logic.js">
 
-
-        <!-- Bottommost /Div (below) containing main content -->
-    </div>
-
-
-    <!-- FOOTER BEGIN -->
-    <div class="card text-center">
-        <div class="card-header">
-            <ul class="nav nav-tabs card-header-tabs">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">
-                        <h5 class="text-white navFont">Home</h5>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="mealPlan.html">
-                        <h5 class="text-white navFont">Meal Plan</h5>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="mealCreate.html">
-                        <h5 class="text-white navFont">Meal Create</h5>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-    <!-- FOOTER END -->
-    <script src="assets/javascript/logic.js">
-
-    </script>
-
-
+        </script>
 </body>
 
 </html>

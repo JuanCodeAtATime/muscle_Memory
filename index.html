@@ -31,86 +31,45 @@
 
 <body>
 
-    <!-- COLLAPSIBLE NAV BAR BEGIN -->
-    <div class="pos-f-t">
-        <div class="collapse" id="navbarToggleExternalContent">
-            <div class="bg-dark p-4">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">
-                        <h5 class="text-white navFont">Home</h5>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="mealPlan.html">
-                        <h5 class="text-white navFont">Meal Plan</h5>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="mealCreate.html">
-                        <h5 class="text-white navFont">Meal Create</h5>
-                    </a>
-                </li>
-            </div>
-        </div>
-        <nav class="navbar navbar-dark bg-dark">
-            <button class="navbar-toggler" type="button" data-toggle="collapse"
-                data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </nav>
-    </div>
-
-    <!-- COLLAPSIBLE NAV BAR END -->
-
-    <div class="container">
-        <!-- first container row BEGIN div -->
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="panel top" id="background">
-                        <div class="panel-schedule">
-                            <h3 class="title">MUSCLE MEMORY</h3>
-                            <div class="ttt">
-                                <p id="nxtMeal">Next Meal Time</p>
-                                <p id="nxtMealT"></p>
-                            </div>
-                            <hr class="coolHr">
+    <!-- MY NAV BAR BEGIN -->
+    <div class="navbar" id="nav">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="nav">
+                    <div class="nav">
+                        <img src="assets/images/ppinc.png" width="35" height="35" class="ppincLogo" alt="">
+                        <h3 class="title">MUSCLE MEMORY</h3>
+                        <div class="ttt">
+                            <p id="nxtMeal">Next Meal Time</p>
+                            <a class="nav-link" href="index.html">
+                                <p id="listItem1">Home</p>
+                            </a>
+                            <p id="nxtMealT"></p>
+                            <a class="nav-link" href="mealCreate.html">
+                                <p id="listItem1">Create</p>
+                            </a>
                         </div>
+
                     </div>
                 </div>
             </div>
-            <!-- first container row END div -->
         </div>
-
-        <!-- SEPARATING TABLE BELOW FROM MEAL TRACKER ROW -->
-        <div class="panel-body">
-            <table class="table table-hover" id="meals-table">
-                <thead>
-                    <tr>
-                        <th><strong>MEAL</strong></th>
-                        <th><strong>CALORIES</strong></th>
-                        <th><strong>FREQUENCY (min)</strong></th>
-                        <th><strong>MIN. UNTIL NEXT MEAL</strong></th>
-                    </tr>
-
-                </thead>
-                <tbody>
-
-                </tbody>
-            </table>
-        </div>
-        <!-- SEPARATING TABLE ABOVE FROM MEAL TRACKER ROW -->
+    </div>
+    <!-- My NAV BAR ENDING DIV.  First container row END div -->
 
 
-        <!-- BELOW BEGINS THE INPUT FIELDS TO ADD MEALS -->
-        <div class="panel aF" id="background">
+    <!-- This container holds both meal log and meal table divs -->
+    <div class="container">
+
+
+        <!-- BELOW BEGINS THE INPUT FIELDS FOR MEAL LOG  -->
+        <div class="panel" id="background">
             <div class="panel-heading panel-title">
                 <h4 class="title">MY MEAL NOW</h4>
                 <hr>
             </div>
 
-            <div class="panel-body">
+            <div class="panel-body homeLog">
                 <div class="row">
                     <form>
                         <div class="col-lg-2">
@@ -153,45 +112,46 @@
                     <!-- Two /divs below are for panel-body and row divs directly above form -->
                 </div>
             </div>
-
-
         </div>
 
-        <!-- ABOVE ENDS THE INPUT FIELDS TO ADD MEALS -->
+        <!-- ABOVE ENDS THE INPUT FIELDS FOR MEAL LOG -->
+
+
+        <!-- BELOW BEGINS MEAL TABLE -->
+
+
+
+        <div class="panel-body">
+            <table class="table table-hover" id="meals-table">
+                <thead>
+                    <tr>
+                        <th><strong>MY LAST MEALS</strong></th>
+                        <th><strong>CALORIES</strong></th>
+                        <th><strong>FREQUENCY (min)</strong></th>
+                        <th><strong>MIN. UNTIL NEXT MEAL</strong></th>
+                    </tr>
+
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ABOVE ENDS MEAL TABLE -->
+
 
 
         <!-- Bottommost /Div (below) containing main content -->
     </div>
 
+    <!-- Two divs below created to make responsive sticky footer.  Standard code wasn't working -->
 
-    <!-- FOOTER BEGIN -->
-    <div class="card text-center">
-        <div class="card-header">
-            <ul class="nav nav-tabs card-header-tabs">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">
-                        <h5 class="text-white navFont">Home</h5>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="mealPlan.html">
-                        <h5 class="text-white navFont">Meal Plan</h5>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="mealCreate.html">
-                        <h5 class="text-white navFont">Meal Create</h5>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
-    <!-- FOOTER END -->
+    <div id="body"></div>
+    <div id="footer">Primal Platoon, Tech.</div>
+
+
+
     <script src="assets/javascript/logic.js">
 
     </script>

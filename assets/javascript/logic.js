@@ -108,6 +108,7 @@ $("#create-meal-btn").on("click", function (event) {
     let cals1 = $("#cals-input").val().trim();
 
 
+
     alert(mealNickname);
 
 
@@ -171,6 +172,17 @@ database.ref().on("child_added", function (childSnapshot) {
     let protein = childSnapshot.val().pro;
     let fats = childSnapshot.val().phat;
     let cals1 = childSnapshot.val().cal;
+
+
+
+    // Declare new nutrient sum variables here
+
+
+
+
+
+
+    // Calculation for the nutrient sum variables here
 
     // Train Info
     console.log(mealNickname);

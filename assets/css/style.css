@@ -5,11 +5,20 @@ that a meal was succesfully added */
 
 
 body {
-    margin: 0;
+    /* margin: 0; */
     background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("../images/meal2.jpg");
     background-size: cover;
     align-items: center;
     justify-content: center;
+}
+
+#nav {
+  width: 100%;
+  top: 0;
+  margin-top: 0;
+  color: whitesmoke;
+  text-align: center;
+  /* background-color: #343a40; */
 }
 
 .container {
@@ -20,23 +29,24 @@ body {
     color: whitesmoke;
 }
 
-/* NAVBAR BELOW */
-
-.navbar {
-  background-color: #343a40;
-  opacity: 0.83;
+/* Img below if for Primal Platoon Inc logo (PPINC) */
+ 
+img {
+  display: inline;
+  border-radius: 50%;
+  margin: 8px auto auto auto;
 }
 
-.navFont {
-
-  font-family: 'Bevan', cursive;
-  color: whitesmoke;
-  margin-left: 6px;
-  display: inline-block;
-  padding-right: 5px;
-
+h3.title {
+  margin-top: 1px;
+  padding-top: 3px;
 }
 
+.homeLog {
+margin-bottom: 5px;
+
+}
+ 
 li {
   list-style-type: none;
   display: inline;
@@ -67,6 +77,13 @@ li {
 
 #created-meals-table, tr > th {
   text-align: center;
+  background-color: #7BA05B;
+  border-radius: 7px;
+  padding: 2px;
+}
+
+tr {
+  padding: auto 2px;
 }
 
 
@@ -93,6 +110,8 @@ li {
     display: inline-block;
     padding: 0px 7px;
     font-size: larger;
+    margin-bottom: 0;
+    z-index: 2;
     
 }
 
@@ -127,13 +146,13 @@ tr:hover {
 
 /* All these properties had to be defined to get rid of the hyperlink's default blue color. */
  a { 
-    /* text-decoration : none;  */
+    text-decoration : none; 
     color : whitesmoke; 
 }
 
 a:link {
     color: whitesmoke;
-    /* text-decoration : none;  */
+    text-decoration : none; 
   }
   
   a:visited {
@@ -143,22 +162,16 @@ a:link {
   
   a:hover {
     color: red;
-    /* text-decoration : none;  */
+    text-decoration : none; 
   }
 
   a:active {
     color: whitesmoke;
-    /* text-decoration: none; */
+    text-decoration: none;
 } 
 
-/* A cool strip (horizontal line) to complement the clock strip above it */
-hr.coolHr {
-    border: 12px solid #343a40;
-    margin: 0 auto;
-    padding-bottom: 0;
-    opacity: 0.83;
-   
-  }
+
+
 
 /* All code below controls the Add Meals row where all User input goes */
    
@@ -189,10 +202,61 @@ hr.coolHr {
   #frequency-input {
     width: 33%;
     align-items: center;
-    display: inline-block;
-
-    
+    display: inline-block;    
   }
+
+
+  
+  /* This body id prevents the footer from covering content on smaller screens */
+#body {
+    padding: 10px;
+    padding-bottom: 100px;   
+ }
+
+#footer {
+  background-color: #343a40;
+  color: whitesmoke;
+  border-top: 2px solid #7BA05B;
+  position:fixed;
+  bottom:0;
+  width:100%;
+  height:60px;  
+  line-height: 50px;
+  text-align: center;
+  font-family: 'Quantico', sans-serif;
+  margin: 0;
+  width: 100%;
+  opacity: .83;
+}
+
+.navbar {
+  background-color: #343a40;
+  color: whitesmoke;
+  border-bottom: 2px solid #7BA05B;
+  position: sticky;
+  height: auto;  
+  text-align: center;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+  width: 100%;
+  opacity: .83;
+}
+
+
+
+
+
+#listItem1, #listItem2 {
+  background-color: #7BA05B;
+  color: whitesmoke;
+  display: inline;
+  padding: 5px 7px;
+  margin: 2px; 
+  border-radius: 7px; 
+
+
+}
+
   
 
  

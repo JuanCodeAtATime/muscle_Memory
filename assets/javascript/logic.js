@@ -83,7 +83,7 @@ $("#add-meal-btn").on("click", function (event) {
     console.log(newMeal.lastM);
     console.log(newMeal.newFreq);
 
-    alert("New flight successfully added");
+
 
     // Clears all of the text-boxes upon submission
     $("#meal-name-input").val("");
@@ -108,8 +108,6 @@ $("#create-meal-btn").on("click", function (event) {
     let cals1 = $("#cals-input").val().trim();
 
 
-
-    alert(mealNickname);
 
 
     // Creating local "temporary" object to hold new train data
@@ -136,7 +134,7 @@ $("#create-meal-btn").on("click", function (event) {
     console.log(newlyCreated.cal);
 
     // Create a modal for the below ALERT
-    alert("New meal successfully created. View it in the updated Meal Plan");
+    // alert("New meal successfully created. View it in the updated Meal Plan");
 
     // Clears all of the text-boxes upon submission
 
@@ -228,7 +226,7 @@ database.ref().on("child_added", function (childSnapshot) {
 
 
 
-    // Creating new row that will be populated with User input + time calculations based on this input
+    // Table on homepage.  Creating new row that will be populated with User input + time calculations based on this input
 
     let newRow = $("<tr>").append(
         $("<td>").text(mealName),
@@ -237,23 +235,82 @@ database.ref().on("child_added", function (childSnapshot) {
         $("<td>").text(mtNxMeal)
 
     );
+
+
+
+    // This newlyCreatedMealRow finds and displays the sum of the macronutrient columns.  
+    // Although it's limited to five meals, this is by design.  
+
     let newlyCreatedMealRow = $("<tr>").append(
-        $("<td>").text(mealNickname),
-        $("<td>").text(mealDescrip),
-        $("<td>").text(carbs),
-        $("<td>").text(protein),
-        $("<td>").text(fats),
-        $("<td>").text(cals1)
+        $("#mealN").text(mealNickname),
+        $("#mealD").text(mealDescrip),
+        $("#carbsF").text(carbs),
+        $("#proT").text(protein),
+        $("#fatty").text(fats),
+        $("#cals1").text(cals1)
     );
+
+
+    // Function to add macronutrients columns by ID
+    $(function () {
+        let carbsTotals = 0;
+        let proteinTotals = 0;
+        let fatsTotals = 0;
+        let calsTotals = 0;
+
+        $("[id*=carbsF]").each(function () {
+            carbsTotals = carbsTotals + parseFloat($(this).html());
+
+        });
+
+        $("[id*=proT]").each(function () {
+            proteinTotals = proteinTotals + parseFloat($(this).html());
+        });
+
+
+        $("[id*=fatty]").each(function () {
+            fatsTotals = fatsTotals + parseFloat($(this).html());
+
+        });
+
+        $("[id*=cals1]").each(function () {
+            calsTotals = calsTotals + parseFloat($(this).html());
+
+        });
+
+        $("[id*=totalCarbs]").html(carbsTotals.toString() + "g");
+
+        $("[id*=totalPro]").html(proteinTotals.toString() + "g");
+
+        $("[id*=totalFats]").html(fatsTotals.toString() + "g");
+
+        $("[id*=totalCals]").html(calsTotals.toString() + "g");
+
+    });
+
 
     // Appending new row to the table
     $("#created-meals-table > tbody").append(newlyCreatedMealRow);
+
 
     // Appending new row to the table
     $("#meals-table > tbody").append(newRow);
 
     // Appending dynamic "Min. Until Next Meal" time to div below header title"
     $("#nxtMealT").text(nextMealT);
+
+
+
+    // for (let i = 3; i < 6; i++) {
+    //     let sum = 0;
+    //     // iteration through all td's in the column
+    //     $('#created-meals-table>tbody>tr>td:nth-child(' + i + ')').each(function () {
+    //         sum += parseInt($(this).text()) || 0;
+    //     });
+    //     // set total in last cell of the column
+    //     $('#created-meals-table>tbody>tr>td:nth-child(' + i + ')').last().html(sum);
+    //     $('#>created-meals-table>tbody>tr>td:nth-child(' + i + ')').last().toggleClass('total');
+    // }
 
 
 });

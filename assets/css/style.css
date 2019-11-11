@@ -242,10 +242,6 @@ a:link {
   opacity: .83;
 }
 
-
-
-
-
 #listItem1, #listItem2 {
   background-color: #7BA05B;
   color: whitesmoke;
@@ -254,9 +250,29 @@ a:link {
   margin: 2px; 
   border-radius: 7px; 
 
+}
+
+.nutrTotals {
+  background-color: #343a40;
+  color: whitesmoke;
+  
+}
+
+.nutrTotalBtn {
+
+  background-color: #7BA05B;
+  color: #343a40;
+  font-family: 'Quantico', sans-serif;
 
 }
 
+.look {
+
+  text-align: center;
+  display: inline-block;
+  align-content: center;
+  align-items: center;
+}
   
 
  

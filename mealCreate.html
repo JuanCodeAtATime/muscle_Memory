@@ -131,10 +131,10 @@
                                     <th><strong>MEAL NICKNAME</strong></th>
                                 </div>
                                 <div class="col-lg-2">
-                                    <th><strong>MEAL DESCRIPTION</strong></th>
+                                    <th><strong>FOOD ITEMS</strong></th>
                                 </div>
                                 <div class="col-lg-2">
-                                    <th><strong>CARBOHYDRATES</strong></th>
+                                    <th><strong>CARBS</strong></th>
 
                                 </div>
                                 <div class="col-lg-2">
@@ -183,7 +183,10 @@
                         <td id="fatty"></td>
                         <td id="cals1"></td>
                     </tr>
-                    <tr>
+
+                    <!-- 11/12/19: Started adding code to delete rows.  
+                    Delete onclick function below if it's no used. -->
+                    <tr onclick="delRow()" id="tRow5">
                         <td id="mealN"></td>
                         <td id="mealD"></td>
                         <td id="carbsF"></td>
@@ -197,27 +200,28 @@
 
             <div class="nutrTotals">
                 <div class="row">
-
+                    <h4 class="title">Macronutrient Totals</h4>
+                    <hr>
                     <div class="col-lg-3 look">
-                        <div class="form-group mealD">
+                        <div>
                             <label for="total-Carbs">Carbs</label>
                             <button type="button" class="nutrTotalBtn" id="totalCarbs">
                         </div>
                     </div>
                     <div class="col-lg-3 look">
-                        <div class="form-group">
+                        <div>
                             <label for="destination-input">Protein</label>
                             <button type="button" class="nutrTotalBtn" id="totalPro">
                         </div>
                     </div>
                     <div class="col-lg-3 look">
-                        <div class="form-group">
+                        <div>
                             <label for="lastM-input">Fats</label>
                             <button type="button" class="nutrTotalBtn" id="totalFats">
                         </div>
                     </div>
                     <div class="col-lg-3 look">
-                        <div class="form-group">
+                        <div>
                             <label for="lastM-input">Calories</label>
                             <button type="button" class="nutrTotalBtn" id="totalCals">
                         </div>

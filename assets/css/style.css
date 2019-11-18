@@ -255,25 +255,22 @@ a:link {
 .nutrTotals {
   background-color: #343a40;
   color: whitesmoke;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  padding: 5px;
+  border-radius: 7px;
   
 }
 
 .nutrTotalBtn {
 
   background-color: #7BA05B;
-  color: #343a40;
   font-family: 'Quantico', sans-serif;
+  padding: 3px;
 
 }
 
-.look {
-
-  text-align: center;
-  display: inline-block;
-  align-content: center;
-  align-items: center;
-}
-  
 
  
   

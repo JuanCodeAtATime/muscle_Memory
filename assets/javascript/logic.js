@@ -1,3 +1,4 @@
+
 let firebaseConfig = {
     apiKey: "AIzaSyAdVdy8evj2oqE2m4NUlCl8LddqLQeZpr8",
     authDomain: "musclememory2020.firebaseapp.com",
@@ -284,9 +285,28 @@ database.ref().on("child_added", function (childSnapshot) {
 
         $("[id*=totalFats]").html(fatsTotals.toString() + "g");
 
-        $("[id*=totalCals]").html(calsTotals.toString() + "g");
+        $("[id*=totalCals]").html(calsTotals.toString());
 
     });
+
+    // function delRow() {
+
+    //     let tRow5 = document.getElementById("tRow5");
+
+
+    //     tRow5.addEventListener('cl')
+
+    //     let deleteRow = database.collection('tr').doc('BJ');
+
+    //     // Remove the 'capital' field from the document
+    //     let removeCapital = deleteRow.update({
+    //         capital: firebase.firestore.FieldValue.delete()
+    //     });
+
+
+    // }
+
+
 
 
     // Appending new row to the table
@@ -301,16 +321,6 @@ database.ref().on("child_added", function (childSnapshot) {
 
 
 
-    // for (let i = 3; i < 6; i++) {
-    //     let sum = 0;
-    //     // iteration through all td's in the column
-    //     $('#created-meals-table>tbody>tr>td:nth-child(' + i + ')').each(function () {
-    //         sum += parseInt($(this).text()) || 0;
-    //     });
-    //     // set total in last cell of the column
-    //     $('#created-meals-table>tbody>tr>td:nth-child(' + i + ')').last().html(sum);
-    //     $('#>created-meals-table>tbody>tr>td:nth-child(' + i + ')').last().toggleClass('total');
-    // }
 
 
 });
